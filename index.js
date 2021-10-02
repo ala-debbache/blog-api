@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const mongodb = require("mongodb");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -10,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors({
     "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
+    "methods": "GET,PATCH,POST,DELETE"
 }));
 dotenv.config();
 app.use("/posts",router);
