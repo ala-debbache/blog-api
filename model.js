@@ -19,6 +19,12 @@ const postSchema = new Schema({
         type: Date,
         default: Date.now
     },
+},{
+    writeConcern: {
+        w: 'majority',
+        j: true,
+        wtimeout: 1000
+      }
 });
 
 const Post = mongoose.model("Post",postSchema);
