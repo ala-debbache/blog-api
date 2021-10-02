@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URI,()=>console.log("we're connected to the d
 
 
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname+"/public/index.html");
+    res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(8080||process.env.PORT,()=>console.log(`server runing on http://localhost:${8080||process.env.PORT}`));
+app.listen(process.env.PORT||8080,()=>console.log(`server runing on http://localhost:${8080||process.env.PORT}`));
