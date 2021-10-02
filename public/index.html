@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <title>Blog Api</title>
+    <style>
+        *{
+            font-family: 'PT Sans', sans-serif;
+        }
+        a{
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog posts API</h1>
+    <h2>Urls</h2>
+    <h3>get all posts from DB</h3>
+    <a href="#">http://localhost:3000/posts</a>
+    <h3>post urls</h3>
+    <ul>
+        <li>
+            <p>create new post</p>
+            POST <a href="#">http://localhost:3000/posts</a>
+        </li>
+        <li>
+            <p>get post from DB</p>
+            GET <a href="#">http://localhost:3000/posts/:id</a>
+        </li>
+        <li>
+            <p>update a specific post</p>
+            PATCH <a href="#">http://localhost:3000/posts/:id</a>
+        </li>
+        <li>
+            <p>delete a specific post</p>
+            DELETE <a href="#">http://localhost:3000/posts/:id</a>
+        </li>
+    </ul>
+</body>
+</html>
