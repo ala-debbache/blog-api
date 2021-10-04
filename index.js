@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const router = require("./routes");
+const postRouter = require("./routes/post-routes");
+const tagRouter = require("./routes/tag-routes");
 
 const app = express();
 app.use(bodyParser.json());
@@ -12,7 +13,8 @@ app.use(cors({
     "methods": "GET,PATCH,POST,DELETE"
 }));
 dotenv.config();
-app.use("/posts",router);
+app.use("/posts",postRouter);
+app.use("/tags",tagRouter);
 
 mongoose.connect(process.env.MONGO_URI,()=>console.log("we're connected to the database"));
 
